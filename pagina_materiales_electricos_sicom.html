@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Materiales Eléctricos en Santa Fe | SICOM Eléctrica</title>
+  <meta name="description" content="Venta de materiales eléctricos en Santa Fe y Santo Tomé. Disyuntores, térmicas, cables, tableros, contactores y productos para instalaciones eléctricas domiciliarias, comerciales e industriales." />
+  <meta name="keywords" content="materiales eléctricos Santa Fe, disyuntor 40A, térmica 20A, cable 2.5mm, tableros eléctricos, ferretería eléctrica Santo Tomé" />
+  <meta name="author" content="SICOM Eléctrica" />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: #f4f7fb;
+      color: #172033;
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(135deg, #06111f, #0f3b6d);
+      color: white;
+      padding: 22px 7% 80px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 75px;
+    }
+
+    .logo {
+      font-size: 30px;
+      font-weight: 900;
+      letter-spacing: 1px;
+    }
+
+    .logo span {
+      color: #facc15;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 24px;
+      font-weight: 700;
+      opacity: 0.9;
+    }
+
+    nav a:hover {
+      color: #facc15;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 44px;
+      align-items: center;
+    }
+
+    .tag {
+      display: inline-block;
+      background: rgba(250, 204, 21, 0.14);
+      color: #fde047;
+      padding: 8px 14px;
+      border: 1px solid rgba(250, 204, 21, 0.35);
+      border-radius: 999px;
+      font-weight: 800;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 {
+      font-size: clamp(38px, 6vw, 64px);
+      line-height: 1.05;
+      margin-bottom: 22px;
+    }
+
+    .hero p {
+      color: #dbeafe;
+      font-size: 20px;
+      margin-bottom: 30px;
+      max-width: 760px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #facc15;
+      color: #06111f;
+      padding: 15px 26px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: 900;
+      transition: 0.3s;
+      box-shadow: 0 12px 26px rgba(250, 204, 21, 0.22);
+    }
+
+    .btn:hover {
+      background: #fde047;
+      transform: translateY(-3px);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: white;
+      border: 1px solid rgba(255,255,255,0.35);
+      box-shadow: none;
+    }
+
+    .hero-card {
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.14);
+      border-radius: 24px;
+      padding: 30px;
+      backdrop-filter: blur(8px);
+      box-shadow: 0 20px 50px rgba(0,0,0,0.24);
+    }
+
+    .hero-card h3 {
+      font-size: 26px;
+      margin-bottom: 16px;
+      color: #fde047;
+    }
+
+    .hero-card ul {
+      list-style: none;
+    }
+
+    .hero-card li {
+      margin-bottom: 13px;
+      padding-left: 28px;
+      position: relative;
+      color: #eef6ff;
+    }
+
+    .hero-card li::before {
+      content: '✓';
+      color: #facc15;
+      position: absolute;
+      left: 0;
+      font-weight: 900;
+    }
+
+    section {
+      padding: 80px 7%;
+    }
+
+    .section-title {
+      font-size: clamp(30px, 4vw, 44px);
+      text-align: center;
+      color: #06111f;
+      margin-bottom: 12px;
+    }
+
+    .section-subtitle {
+      text-align: center;
+      color: #56657a;
+      max-width: 780px;
+      margin: 0 auto 45px;
+      font-size: 18px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 24px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 20px;
+      padding: 28px;
+      box-shadow: 0 14px 35px rgba(15, 23, 42, 0.08);
+      border: 1px solid #e5e7eb;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 45px rgba(15, 23, 42, 0.14);
+    }
+
+    .icon {
+      font-size: 38px;
+      margin-bottom: 14px;
+    }
+
+    .card h3 {
+      color: #0f3b6d;
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+
+    .product {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 310px;
+    }
+
+    .product-img {
+      height: 150px;
+      border-radius: 16px;
+      background: linear-gradient(135deg, #e5e7eb, #f8fafc);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 54px;
+      margin-bottom: 18px;
+      border: 1px dashed #cbd5e1;
+    }
+
+    .price {
+      font-size: 18px;
+      font-weight: 900;
+      color: #0f3b6d;
+      margin: 14px 0;
+    }
+
+    .mini-btn {
+      display: inline-block;
+      background: #0f3b6d;
+      color: white;
+      padding: 12px 18px;
+      border-radius: 9px;
+      text-decoration: none;
+      font-weight: 800;
+      text-align: center;
+    }
+
+    .mini-btn:hover {
+      background: #155ea4;
+    }
+
+    .banner {
+      background: #fff7cc;
+      border-top: 1px solid #fde68a;
+      border-bottom: 1px solid #fde68a;
+      text-align: center;
+    }
+
+    .split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 44px;
+      align-items: center;
+      background: white;
+    }
+
+    .list {
+      list-style: none;
+      margin-top: 18px;
+    }
+
+    .list li {
+      margin-bottom: 12px;
+      padding-left: 28px;
+      position: relative;
+    }
+
+    .list li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: #0f3b6d;
+      font-weight: 900;
+    }
+
+    .quote-box {
+      background: linear-gradient(135deg, #eff6ff, #ffffff);
+      border-left: 7px solid #facc15;
+      padding: 34px;
+      border-radius: 22px;
+      box-shadow: 0 14px 35px rgba(15, 23, 42, 0.08);
+    }
+
+    .cta {
+      background: linear-gradient(135deg, #06111f, #0f3b6d);
+      color: white;
+      text-align: center;
+    }
+
+    .cta h2 {
+      font-size: clamp(32px, 5vw, 48px);
+      margin-bottom: 18px;
+    }
+
+    .cta p {
+      color: #dbeafe;
+      max-width: 760px;
+      margin: 0 auto 30px;
+      font-size: 19px;
+    }
+
+    .whatsapp-float {
+      position: fixed;
+      right: 22px;
+      bottom: 22px;
+      width: 62px;
+      height: 62px;
+      border-radius: 50%;
+      background: #25d366;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 30px;
+      text-decoration: none;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+      z-index: 20;
+    }
+
+    footer {
+      background: #020617;
+      color: #94a3b8;
+      text-align: center;
+      padding: 28px;
+      font-size: 14px;
+    }
+
+    @media (max-width: 850px) {
+      nav {
+        flex-direction: column;
+        gap: 18px;
+        margin-bottom: 50px;
+      }
+
+      nav div:last-child {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+      }
+
+      nav a {
+        margin-left: 0;
+      }
+
+      .hero,
+      .split {
+        grid-template-columns: 1fr;
+      }
+
+      section,
+      header {
+        padding-left: 6%;
+        padding-right: 6%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header id="inicio">
+    <nav>
+      <div class="logo">SICOM <span>Eléctrica</span></div>
+      <div>
+        <a href="#categorias">Categorías</a>
+        <a href="#productos">Productos</a>
+        <a href="#pedido">Cómo comprar</a>
+        <a href="#contacto">Contacto</a>
+      </div>
+    </nav>
+
+    <div class="hero">
+      <div>
+        <span class="tag">Materiales eléctricos en Santa Fe y Santo Tomé</span>
+        <h1>Material eléctrico para instalaciones seguras y profesionales</h1>
+        <p>
+          Venta de disyuntores, térmicas, cables, tableros, protecciones y productos eléctricos
+          para instalaciones domiciliarias, comerciales e industriales. Consultá disponibilidad por WhatsApp.
+        </p>
+        <div class="hero-actions">
+          <a class="btn" href="https://wa.me/5493415142771?text=Hola,%20quiero%20consultar%20por%20materiales%20eléctricos.%20Necesito:%20" target="_blank">Consultar por WhatsApp</a>
+          <a class="btn btn-secondary" href="#productos">Ver productos</a>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <h3>Atención rápida</h3>
+        <ul>
+          <li>Consultas por producto y disponibilidad.</li>
+          <li>Asesoramiento técnico básico para elegir correctamente.</li>
+          <li>Productos para obra, mantenimiento e instalaciones.</li>
+          <li>Atención en Santa Fe, Santo Tomé y zona.</li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <section id="categorias">
+    <h2 class="section-title">Categorías principales</h2>
+    <p class="section-subtitle">
+      Organizamos los productos por necesidad para que encuentres rápido el material eléctrico que buscás.
+    </p>
+
+    <div class="grid">
+      <div class="card">
+        <div class="icon">⚡</div>
+        <h3>Protecciones eléctricas</h3>
+        <p>Disyuntores, térmicas, interruptores, protectores y elementos de seguridad para instalaciones.</p>
+      </div>
+
+      <div class="card">
+        <div class="icon">🔌</div>
+        <h3>Cables y conductores</h3>
+        <p>Cables para instalaciones domiciliarias, comerciales e industriales según necesidad de corriente.</p>
+      </div>
+
+      <div class="card">
+        <div class="icon">🧰</div>
+        <h3>Tableros y accesorios</h3>
+        <p>Cajas, gabinetes, borneras, riel DIN, peines de conexión y accesorios para montaje eléctrico.</p>
+      </div>
+
+      <div class="card">
+        <div class="icon">🏭</div>
+        <h3>Material industrial</h3>
+        <p>Contactores, relés, comandos, señalización, automatización básica y repuestos eléctricos.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="productos" class="banner">
+    <h2 class="section-title">Productos destacados</h2>
+    <p class="section-subtitle">
+      Primeros productos publicados. La página está preparada para seguir sumando artículos.
+    </p>
+
+    <div class="grid">
+      <div class="card product">
+        <div>
+          <div class="product-img">⚡</div>
+          <h3>Disyuntor diferencial 40A</h3>
+          <p>Protección contra fugas eléctricas. Ideal para instalaciones domiciliarias y comerciales.</p>
+          <div class="price">Consultar precio y disponibilidad</div>
+        </div>
+        <a class="mini-btn" href="https://wa.me/5493415142771?text=Hola,%20quiero%20consultar%20por%20disyuntor%20diferencial%2040A." target="_blank">Consultar producto</a>
+      </div>
+
+      <div class="card product">
+        <div>
+          <div class="product-img">🔲</div>
+          <h3>Llave térmica 20A</h3>
+          <p>Protección contra sobrecargas y cortocircuitos para circuitos eléctricos.</p>
+          <div class="price">Consultar precio y disponibilidad</div>
+        </div>
+        <a class="mini-btn" href="https://wa.me/5493415142771?text=Hola,%20quiero%20consultar%20por%20llave%20térmica%2020A." target="_blank">Consultar producto</a>
+      </div>
+
+      <div class="card product">
+        <div>
+          <div class="product-img">🧵</div>
+          <h3>Cable 2.5 mm²</h3>
+          <p>Conductor para instalaciones eléctricas. Consultá colores, metros y disponibilidad.</p>
+          <div class="price">Consultar precio por metro o rollo</div>
+        </div>
+        <a class="mini-btn" href="https://wa.me/5493415142771?text=Hola,%20quiero%20consultar%20por%20cable%202.5%20mm2." target="_blank">Consultar producto</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="pedido" class="split">
+    <div>
+      <h2 class="section-title" style="text-align:left;">Cómo comprar o consultar</h2>
+      <p>
+        La venta se gestiona por WhatsApp para confirmar disponibilidad, cantidad, zona de entrega o retiro y forma de pago.
+      </p>
+      <ul class="list">
+        <li>Elegís el producto que necesitás.</li>
+        <li>Consultás por WhatsApp con el botón de la página.</li>
+        <li>Confirmamos disponibilidad y precio actualizado.</li>
+        <li>Coordinamos entrega, retiro o pedido especial.</li>
+      </ul>
+    </div>
+
+    <div class="quote-box">
+      <h3>Mensaje recomendado</h3>
+      <p>
+        Para responderte rápido, enviá: producto, cantidad, ubicación y si es para obra, vivienda, comercio o industria.
+      </p>
+      <br />
+      <p><strong>Ejemplo:</strong> “Necesito 2 térmicas de 20A y 20 metros de cable 2.5 mm² para una instalación domiciliaria en Santo Tomé”.</p>
+    </div>
+  </section>
+
+  <section id="contacto" class="cta">
+    <h2>¿Buscás material eléctrico?</h2>
+    <p>
+      Escribinos ahora y consultá por disponibilidad, precios y productos para tu instalación.
+    </p>
+    <a class="btn" href="https://wa.me/5493415142771?text=Hola,%20quiero%20consultar%20por%20materiales%20eléctricos.%20Producto:%20%0ACantidad:%20%0AUbicación:%20" target="_blank">Enviar consulta</a>
+  </section>
+
+  <a class="whatsapp-float" href="https://wa.me/5493415142771?text=Hola,%20quiero%20consultar%20por%20materiales%20eléctricos." target="_blank" aria-label="WhatsApp">☎</a>
+
+  <footer>
+    © 2026 SICOM Eléctrica · Materiales eléctricos en Santa Fe y Santo Tomé · Consultas por WhatsApp
+  </footer>
+
+</body>
+</html>
